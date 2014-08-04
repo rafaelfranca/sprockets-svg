@@ -6,8 +6,10 @@ gemspec
 gem 'rake'
 gem 'rspec'
 gem 'rspec-rails'
-gem 'sass-rails'
+gem 'sass'
 gem 'rails'
+
+gem 'sprockets', github: 'sstephenson/sprockets', branch: 'master'
 
 if RUBY_VERSION >= '2'
   gem 'byebug'

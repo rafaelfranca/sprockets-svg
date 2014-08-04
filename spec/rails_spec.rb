@@ -9,9 +9,9 @@ ASSETS = Pathname.new(COMPILED_ASSETS_PATH)
 
 describe 'Sprockets::Svg' do
 
-  let(:svg_name) { 'facebook-213385e4d9304ef93b23578fc4c93440.svg' }
+  let(:svg_name) { 'facebook-da3e5605ce6c79ee3f97e41d2941cad90ae1f3f2.svg' }
 
-  let(:png_name) { 'facebook.svg-213385e4d9304ef93b23578fc4c93440.png' }
+  let(:png_name) { 'facebook-67374175217685e5b8e379cf6bd012d6a55d4a73.svg' }
 
   let(:svg_path) { ASSETS.join(svg_name) }
 
@@ -61,7 +61,7 @@ describe 'Sprockets::Svg' do
   describe AssetsController, type: :controller do
 
     it 'rack' do
-      get :test, file: 'facebook.svg.png'
+      get :test, file: 'facebook.png'
       expect(response).to be_success
       expect(response.body.force_encoding('utf-8')).to be_starts_with("\x89PNG\r\n".force_encoding('utf-8'))
       expect(response.headers['Content-Type']).to be == 'image/png'
